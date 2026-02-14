@@ -23,24 +23,27 @@ class NanobananaClient:
         - 后续的像素化算法（pixel_converter）会负责精确的颜色映射
 
         提示词需要引导生成具备以下特征的图像：
-        1. 极少的颜色数量 (5-8种)
-        2. 每个色块内颜色完全均匀，无渐变无纹理
-        3. 色块边界锐利清晰
-        4. 高对比度的配色
-        5. 纯白背景
-        6. 极简化的造型，无细碎细节
+        1. Q版/可爱（chibi/kawaii）画风，大头小身体
+        2. 极少的颜色数量 (5-8种)
+        3. 每个色块内颜色完全均匀，无渐变无纹理
+        4. 色块边界锐利清晰
+        5. 高对比度的配色
+        6. 纯白背景
+        7. 极简化的造型，无细碎细节
         """
         prompt = (
-            "Flat vector icon style illustration. "
+            "Cute chibi kawaii style illustration, super deformed 2-head-tall proportions. "
             "STRICTLY follow these rules:\n"
-            "1. MAXIMUM 5-8 solid pure flat colors in the entire image, every region is filled with ONE uniform color, absolutely NO gradient, NO shading, NO texture, NO noise.\n"
-            "2. Every color boundary must be razor-sharp and clean, like a sticker cut-out.\n"
-            "3. Use thick uniform BLACK outlines (3-4px) to separate all color regions, like a coloring book.\n"
-            "4. Use ONLY bright, saturated, high-contrast colors (pure red, blue, yellow, green, orange, pink, purple). NO muted tones, NO pastels, NO earth tones.\n"
-            "5. Pure white (#FFFFFF) background, NO ground, NO shadow, NO reflection.\n"
-            "6. Extremely simplified shape, like an emoji or app icon. Remove ALL unnecessary details.\n"
-            "7. Centered composition, subject takes up 70-80% of the canvas.\n"
-            "8. 2D flat design ONLY. No 3D, no perspective, no depth.\n"
+            "1. CHIBI ART STYLE: Big round head (占身体比例2/3), tiny stubby body, large sparkling round eyes, small dot nose, simple happy expression. Overall look must be adorable and doll-like.\n"
+            "2. ROUNDED SHAPES: All forms must be soft, puffy, and rounded. No sharp angles, no realistic anatomy. Like a cute plush toy or gashapon figure.\n"
+            "3. MAXIMUM 5-8 solid pure flat colors in the entire image, every region is filled with ONE uniform color, absolutely NO gradient, NO shading, NO texture, NO noise.\n"
+            "4. Every color boundary must be razor-sharp and clean, like a sticker cut-out.\n"
+            "5. Use thick uniform BLACK outlines (3-4px) to separate all color regions, like a coloring book.\n"
+            "6. Use ONLY bright, saturated, candy-like colors (bubblegum pink, sky blue, sunny yellow, mint green, coral orange, lavender purple). Colors should feel cheerful and pop.\n"
+            "7. Pure white (#FFFFFF) background, NO ground, NO shadow, NO reflection.\n"
+            "8. Extremely simplified shape, remove ALL unnecessary details. No fingers, simplified hands as mittens.\n"
+            "9. Centered composition, subject takes up 70-80% of the canvas.\n"
+            "10. 2D flat design ONLY. No 3D, no perspective, no depth, no realistic rendering.\n"
             "The image will be converted to a Perler bead pattern, so simplicity and color clarity are critical."
         )
         return prompt
